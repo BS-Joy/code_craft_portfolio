@@ -84,8 +84,9 @@ export default function Navbar() {
 
         <div className="hidden md:block">
           <Button
+            variant="default"
             onClick={() => router.push("https://www.fiverr.com/code_craf")}
-            className="bg-purple-600 hover:bg-purple-700 text-white dark:bg-purple-700 dark:hover:bg-purple-800"
+            className="bg-purple-600 hover:bg-purple-700 text-white dark:bg-purple-700 dark:hover:bg-purple-800 rounded-md py-2 px-3"
           >
             Hire Me
           </Button>

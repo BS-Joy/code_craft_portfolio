@@ -31,7 +31,7 @@ export default function TeamSection() {
     },
     {
       name: "Md Rakibul Islam",
-      role: "UI/UX Designer",
+      role: "Full-Stack Developer",
       image: rakib,
       social: {
         twitter: "#",
@@ -41,7 +41,7 @@ export default function TeamSection() {
     },
     {
       name: "Zaman Sheikh",
-      role: "Backend Developer",
+      role: "Mobile App Developer",
       image: zaman,
       social: {
         twitter: "#",
@@ -52,36 +52,36 @@ export default function TeamSection() {
   ];
 
   return (
-    <section id="team" className="bg-gray-50 py-20 dark:bg-gray-900 md:py-28">
-      <div className="container px-4 md:px-6">
-        <div className="mx-auto max-w-3xl text-center mb-16">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+    <section id='team' className='bg-gray-50 py-20 dark:bg-gray-900 md:py-28'>
+      <div className='container px-4 md:px-6'>
+        <div className='mx-auto max-w-3xl text-center mb-16'>
+          <h2 className='mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl'>
             Our{" "}
-            <span className="text-purple-600 dark:text-purple-400">Team</span>
+            <span className='text-purple-600 dark:text-purple-400'>Team</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 md:text-lg">
+          <p className='text-gray-600 dark:text-gray-400 md:text-lg'>
             Meet the talented professionals behind CodeCraft's innovative AI
             solutions.
           </p>
         </div>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-4'>
           {teamMembers.map((member, index) => (
             <Card
               key={index}
-              className="overflow-hidden border-none shadow-md transition-all rounded-md hover:-translate-y-1 hover:shadow-lg dark:bg-gray-800"
+              className='overflow-hidden border-none shadow-md transition-all rounded-md hover:-translate-y-1 hover:shadow-lg dark:bg-gray-800'
             >
-              <div className="aspect-square w-full overflow-hidden">
+              <div className='aspect-square w-full overflow-hidden'>
                 <Image
                   src={member.image || "/placeholder.svg"}
                   alt={member.name}
                   width={100}
                   height={100}
-                  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                  className='h-full w-full object-cover transition-transform duration-300 hover:scale-105'
                 />
               </div>
-              <CardContent className="p-6 text-center">
-                <h3 className="mb-1 text-xl font-bold">{member.name}</h3>
-                <p className="mb-4 text-purple-600 dark:text-purple-400">
+              <CardContent className='p-6 text-center'>
+                <h3 className='mb-1 text-xl font-bold'>{member.name}</h3>
+                <p className='mb-4 text-purple-600 dark:text-purple-400'>
                   {member.role}
                 </p>
                 {/* <div className="flex justify-center space-x-4">

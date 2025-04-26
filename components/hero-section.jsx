@@ -27,12 +27,12 @@ export default function HeroSection() {
       <div className='container relative z-10 px-4 md:px-6'>
         <div className='grid gap-12 md:grid-cols-2 md:gap-16'>
           <div className='flex flex-col justify-center space-y-4'>
-            <div className='inline-flex items-center rounded-full border border-purple-600/20 bg-purple-50 px-3 py-1 text-base text-purple-600 dark:border-purple-500/30 dark:bg-purple-500/10 dark:text-purple-400'>
+            <div className='inline-flex items-center rounded-full border border-purple-600/20 bg-purple-50 px-3 py-1 text-lg font-medium text-purple-600 dark:border-purple-500/30 dark:bg-purple-500/10 dark:text-purple-400'>
               <Zap className='mr-1 h-3.5 w-3.5' />
               AI-Powered Development
             </div>
-            <div className='space-y-2'>
-              <h1 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none'>
+            <div className='space-y-4'>
+              <h1 className='text-3xl font-bold tracking-normal sm:text-4xl md:text-5xl lg:text-6xl/none'>
                 AI Solutions by{" "}
                 <span className='text-purple-600 dark:text-purple-400'>
                   CodeCraft
@@ -45,8 +45,10 @@ export default function HeroSection() {
             </div>
             <div className='flex flex-col gap-2 min-[400px]:flex-row'>
               <Button
-                className='bg-purple-600 hover:bg-purple-700 text-white dark:bg-purple-700 dark:hover:bg-purple-800'
-                onClick={(e) => router.push("https://www.fiverr.com/code_craf")}
+                className='bg-purple-600 hover:bg-purple-700 text-white text-xl dark:bg-purple-700 dark:hover:bg-purple-800 py-2.5 px-6'
+                onClick={() =>
+                  window.open("https://www.fiverr.com/code_craf", "_blank")
+                }
               >
                 Check my fiverr profile
                 <ArrowRight className='ml-2 h-4 w-4' />

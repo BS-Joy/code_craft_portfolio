@@ -1,5 +1,5 @@
-import { Github, Instagram, Linkedin, Twitter } from "lucide-react"
-import Logo from "./logo"
+import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
+import Logo from "./logo";
 
 export default function Footer() {
   return (
@@ -9,8 +9,9 @@ export default function Footer() {
           <div className="space-y-4">
             <Logo />
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              CodeCraft provides specialized AI development services for businesses looking to leverage the power of
-              artificial intelligence.
+              CodeCraft provides specialized AI development services for
+              businesses looking to leverage the power of artificial
+              intelligence.
             </p>
           </div>
           <div>
@@ -92,10 +93,10 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">
+            {/* <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">
               Connect
-            </h3>
-            <div className="flex space-x-4">
+            </h3> */}
+            {/* <div className="flex space-x-4">
               <a
                 href="#"
                 className="text-gray-600 transition-colors hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400"
@@ -124,7 +125,7 @@ export default function Footer() {
               >
                 <Instagram className="h-5 w-5" />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="mt-10 border-t border-gray-200 pt-6 dark:border-gray-800">
@@ -134,5 +135,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

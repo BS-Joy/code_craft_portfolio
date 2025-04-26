@@ -1,16 +1,19 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Bot, Code, Cpu, MessageSquare, Zap } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Bot, Code, Cpu, MessageSquare, Zap } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function HeroSection() {
+  const router = useRouter();
   // Handle scroll to section
   const handleScroll = (e, sectionId) => {
     e.preventDefault();
     const section = document.getElementById(sectionId);
     if (section) {
       const navbarHeight = 64; // h-16 = 64px from Navbar
-      const sectionPosition = section.getBoundingClientRect().top + window.scrollY;
+      const sectionPosition =
+        section.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
         top: sectionPosition - navbarHeight,
         behavior: "smooth",
@@ -30,26 +33,30 @@ export default function HeroSection() {
             </div>
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                AI Solutions by <span className="text-purple-600 dark:text-purple-400">CodeCraft</span>
+                AI Solutions by{" "}
+                <span className="text-purple-600 dark:text-purple-400">
+                  CodeCraft
+                </span>
               </h1>
               <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                Specialized AI development services for chatbots, GPT integrations, and intelligent mobile applications.
+                Specialized AI development services for chatbots, GPT
+                integrations, and intelligent mobile applications.
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Button
                 className="bg-purple-600 hover:bg-purple-700 text-white dark:bg-purple-700 dark:hover:bg-purple-800"
-                onClick={(e) => handleScroll(e, "projects")}
+                onClick={(e) => router.push("https://www.fiverr.com/code_craf")}
               >
-                View My Work
+                Check my fiverr profile
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button
+              {/* <Button
                 variant="outline"
                 onClick={(e) => handleScroll(e, "contact")}
               >
                 Contact Me
-              </Button>
+              </Button> */}
             </div>
             <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
               <div className="flex items-center">
@@ -98,5 +105,5 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
